@@ -1,10 +1,6 @@
 # BIG BROTHER FOR YOUR REPOSITORY
 
-Для работы следует создать `.env` 
-
-``` dotenv
-# Пример .env
-PATH_TO_FOLDER='/Users/ivan/code/myProject/src/frontend/';
+``` ts
+// Путь до папки с проектом обязательно должен заканчиваться косой чертой.
+await parse('/Users/ivan/Documents/code/myProject/src/frontend/')
 ```
-
-Путь обязательно должен заканчиваться косой чертой.

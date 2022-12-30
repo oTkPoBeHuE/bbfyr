@@ -99,6 +99,7 @@ async function parse(pathToFolder){
 
 async function main() {
     console.time("Время выполнения:");
+    // Путь до папки с проектом обязательно должен заканчиваться косой чертой.
     await parse('/Users/ivan/Documents/code/myProject/src/frontend/')
     console.timeEnd("Время выполнения:")
     return 0;
