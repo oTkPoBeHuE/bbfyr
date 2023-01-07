@@ -1,8 +1,11 @@
-import {dirname, resolve, extname} from "path";
+import { dirname, resolve } from 'path';
 
-export function parsePath(pathToFolder, pathToFile){
+export function parsePath(pathToFolder, pathToFile) {
     const currentFolder = dirname(pathToFolder);
     const normalizePathToFile = pathToFile.replace(/['"]+/g, '');
-    let parsedPath =  !pathToFile.includes(`./`) && !pathToFile.includes('..') ? normalizePathToFile :  resolve(currentFolder, normalizePathToFile, '');
+    const parsedPath =
+        !pathToFile.includes(`./`) && !pathToFile.includes('..')
+            ? normalizePathToFile
+            : resolve(currentFolder, normalizePathToFile, '');
     return parsedPath;
 }
