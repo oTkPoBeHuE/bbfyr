@@ -4,10 +4,20 @@
     "allowSyntheticDefaultImports": true,
     "downlevelIteration": true,
     //    "target": "es2019",
+    "outDir": "./build",
     "rootDir": "./src",
     "lib": ["es2019","ESNext"],
     "module": "ESNext",
-    "moduleResolution": "node16"
+    "moduleResolution": "node16",
+    "baseUrl": "./src",
+		"paths": {
+			"@/*": ["./*"],
+		},
+    "plugins": [
+			{
+				"transform": "typescript-transform-paths"
+			}
+		],
   },
   "include": [
     "src/**/*"
